@@ -25,7 +25,14 @@ puts SongCell.new.()
 
 # --------- an example with caching.
 
-CacheStore = {}
+class CacheStore < Hash
+  def fetch(key, options)
+    self[key] and return self[key]
+    self[key] = yield
+  end
+end
+
+CacheStoreInstance = CacheStore.new
 
 class CachingSongCell < Cell::ViewModel
   self.view_paths = ["../views"]
@@ -44,7 +51,7 @@ private
   end
 
   def cache_store
-    CacheStore
+    CacheStoreInstance # this could be a redis store or whatever, as long as it responds to the #fetch API.
   end
 end
 

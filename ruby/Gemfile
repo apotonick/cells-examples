@@ -1,4 +1,5 @@
 source "https://rubygems.org"
 
 gem "cells", ">= 4.0.0.beta5"
+# gem "cells", path: "../../cells"
 gem "cells-erb"
