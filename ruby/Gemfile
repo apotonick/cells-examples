@@ -1,0 +1,4 @@
+source "https://rubygems.org"
+
+gem "cells", path: "../../cells"
+gem "cells-erb"
