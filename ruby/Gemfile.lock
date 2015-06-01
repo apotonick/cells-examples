@@ -1,14 +1,10 @@
-PATH
-  remote: ../../cells
-  specs:
-    cells (4.0.0.beta4)
-      disposable (~> 0.0.8)
-      tilt (>= 1.4, < 3)
-      uber (~> 0.0.9)
-
 GEM
   remote: https://rubygems.org/
   specs:
+    cells (4.0.0.beta5)
+      disposable (~> 0.0.8)
+      tilt (>= 1.4, < 3)
+      uber (~> 0.0.9)
     cells-erb (0.0.3)
       cells (~> 4.0.0.beta3)
       erbse (>= 0.0.2)
@@ -31,5 +27,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cells!
+  cells (>= 4.0.0.beta5)
   cells-erb
